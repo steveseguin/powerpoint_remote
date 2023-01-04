@@ -90,12 +90,12 @@ You don't need to technically use a StreamDeck to issue MIDI commands; browser h
 
 ## Remote Web control via VDO.Ninja (IFRAME API)
 
-VDO.Ninja has an IFRAME API, which will let you issue commands to VDO.Ninja via a parent window. In this way, you can leverage both the remote peer to peer power of VDO.Ninja, but also the MIDI functionally. A sample web app using the IFRAME API can be found here, https://vdo.ninja/alpha/examples/powerpoint, demonstrating how you can customize the VDO.Ninja controller or embed the VDO.Ninja controller into your app.
+VDO.Ninja has an IFRAME API, which will let you issue commands to VDO.Ninja via a parent window. In this way, you can leverage both the remote peer to peer power of VDO.Ninja, but also the MIDI functionally. A sample web app using the IFRAME API can be found here, https://vdo.ninja/examples/powerpoint, demonstrating how you can customize the VDO.Ninja controller or embed the VDO.Ninja controller into your app.
 
 You can pass a room name via the URL, if you wish to use it in production
 ```
-Client link: https://vdo.ninja/alpha/examples/powerpoint?room=TESTROOM123
-Host link: https://vdo.ninja/alpha/?room=TESTROOM123&midiin
+Client link: https://vdo.ninja/examples/powerpoint?room=TESTROOM123
+Host link: https://vdo.ninja/?room=TESTROOM123&midiin
 ```
 
 ![image](https://user-images.githubusercontent.com/2575698/210515432-7d1dd7a1-6f68-4f5d-a779-0ec982bc768e.png)
@@ -109,9 +109,9 @@ This `nextSlide` and `prevSlide` API call is currently only available on VDO.Nin
 
 If you want to make custom commands, you can just issue RAW MIDI commands via the VDO.Ninja IFRAME API instead.
 
-`iframe.contentWindow.postMessage({"sendRawMIDI":{data:[176, 110, 12]}}, '*');` is an example of a MIDI command. You'll need to update the AutoHotKey script to listen for those new MIDI commands, and do something with it, but that's pretty easy in most cases. Adding a button for such a custom command to the sample code provided is just basic javascript/html, which is also quite accessible.
+`iframe.contentWindow.postMessage({"sendRawMIDI":{data:[176, 110, 12]}}, '*');` is an example of a custom MIDI command. You'll need to update the AutoHotKey script to listen for those new MIDI commands, and do something with it, but that's pretty easy in most cases. Adding a button for such a custom command to the sample code provided is just basic javascript/html, which is also quite accessible.
 
-Sending raw MIDI commands is supported I think in v20 of VDO.Ninja; not just v22.12 and newer.
+Sending custom raw MIDI commands is supported I think in v20 of VDO.Ninja; not just v22.12 and newer.  As such, if `{nextSlide:true}` isn't supported in your version of VDO.Ninja, you can just send `"sendRawMIDI":{data:[176, 110, 11]}}` for example instead.  `[176, 110, 10]` is for "prevSlide", etc.
 
 ## HTTP / Websocket API
 
