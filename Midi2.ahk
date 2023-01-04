@@ -6,6 +6,7 @@
 ; Based on Midi.ahk by Danny Warren
 ; https://github.com/dannywarren/AutoHotkey-Midi
 ;
+; BSD 2-Clause "Simplified" License
 
 Persistent
 
