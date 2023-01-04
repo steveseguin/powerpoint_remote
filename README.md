@@ -94,7 +94,7 @@ You can pass a room name via the URL, if you wish to use it in production
 ```
 Client link: https://vdo.ninja/alpha/examples/powerpoint?room=TESTROOM123
 Host link: https://vdo.ninja/alpha/?room=TESTROOM123&midiin
-``
+```
 
 ![image](https://user-images.githubusercontent.com/2575698/210515432-7d1dd7a1-6f68-4f5d-a779-0ec982bc768e.png)
 
