@@ -32,12 +32,16 @@ At this point, there are a few different ways to use this setup to control Power
 
 A VDO.Ninja remote guest, viewer, or even a publisher can use a built-in control interface to issue next or previous slide commands to the host system.
 
+#### Host setup in VDO.Ninja
+
 This link is used by the host PowerPoint system. 
 `https://vdo.ninja/?director=myRoom123&midiin`
 
 `&midiin` tells the client that its forwarding inbound commands to all local MIDI devices.  We can specify specific MIDI devices if multiple are installed, but generally most people will only have the virtual loopMIDI device installed, so its not an issue.
 
 `?director=myRoom123` can be replaced with other options, but in this case we assume the host is the stream director.  They will likely be screen sharing the local Power Point presentation to everyone in the room, and a room director has more control options than a normal user would.
+
+#### Remote client setup in VDO.Ninja
 
 Since we want to use the built-in remote controller for the guest, we will need to be using VDO.Ninja v22.12 or newer. 
 `https://vdo.ninja/alpha/?room=myRoom123&ppt`
@@ -47,3 +51,47 @@ Since we want to use the built-in remote controller for the guest, we will need 
 ![image](https://user-images.githubusercontent.com/2575698/210496086-d9e6a1bf-145b-4859-8765-0f5da8ccbae5.png)
 
 `&room=myRoom123` just has the guest join the specific room.
+
+## Remote StreamDeck control via MIDI
+
+StreamDecks can send MIDI commands
+
+#### Host setup in VDO.Ninja
+
+This link is used by the host PowerPoint system. 
+`https://vdo.ninja/?director=myRoom123&midiin`
+
+`&midiin` tells the client that its forwarding inbound commands to all local MIDI devices.  We can specify specific MIDI devices if multiple are installed, but generally most people will only have the virtual loopMIDI device installed, so its not an issue.
+
+`?director=myRoom123` can be replaced with other options, but in this case we assume the host is the stream director.  They will likely be screen sharing the local Power Point presentation to everyone in the room, and a room director has more control options than a normal user would.
+
+#### Remote client setup in VDO.Ninja
+
+We can install loopMIDI on the remote StreamDeck machine and install a MIDI plugin onto our StreamDeck.  From there, we can output the MIDI control-change command 110 with value 10 and 11 from our StreamDeck to the loopMIDI virtual loopback device.  VDO.Ninja will detect it when using `&midiout`, and forward it to the host system. 
+
+`https://vdo.ninja/?room=myRoom123&midiout`
+
+`&room=myRoom123` just has the guest join the specific room.
+
+## Local StreamDeck control via MIDI
+
+You don't need VDO.Ninja in this case, just StreamDeck and the MIDI plugin. Outputting the MIDI control-change command 110 with value 10 and 11 from our StreamDeck 
+to the virtual MIDI loopback device is all we need to do.
+
+In our AutoHotKey app, assuming we have the MIDI loopback device selected as the input device, the StreamDeck will be sending commands to the script directly via MIDI. This of course only works locally; not remotely.
+
+## Local Web control via MIDI
+
+You don't need to technically use a StreamDeck to issue MIDI commands; browser have something called WebMIDI, which is what VDO.Ninja uses. Making your own little web app in the browser that issues MIDI commands to the local MIDI device will give web developers quite a bit of flexibility. It's out-of-scope of this guide, but it's something that's easy enough to look up how to do.
+
+## Remote Web control via VDO.Ninja
+
+VDO.Ninja has an IFRAME API, which will let you issue commands to VDO.Ninja via a parent window. In this way, you can leverage both the remote peer to peer power of VDO.Ninja, but also the MIDI functionally. A sample web app is provided, so if you want to customize the VDO.Ninja controller or embed the VDO.Ninja controller into your app, it's fairly easy to do.
+
+## HTTP / Websocket API
+
+Lastly, VDO.Ninja has an HTTP / WSS API, and it lets you issue commands to the host system.  HTTP commands work with StreamDecks, so you can have a remote client issue commands to your VDO.Ninja host system, controlling your PowerPoint, without even that client having VDO.Ninja open themselves.  The reason we'd be using VDO.Ninja is just to make use of the MIDI code that's already there.  
+
+We'd just need to have `https://vdo.ninja/?api=YOURAPIKEY&midiin` open to make use of this as a host- we don't need to be even viewing or sharing a video.  The API key can be made up, so long as it matches the HTTP request.
+
+`https://api.vdo.ninja/YOURAPIKEY/nextSlide` and `https://api.vdo.ninja/YOURAPIKEY/prevSlide` woudl be the HTTP commands. Refer to the API documentation for details on the WSS commands.
