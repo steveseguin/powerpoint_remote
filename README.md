@@ -88,9 +88,15 @@ You don't need to technically use a StreamDeck to issue MIDI commands; browser h
 
 ## Remote Web control via VDO.Ninja
 
-VDO.Ninja has an IFRAME API, which will let you issue commands to VDO.Ninja via a parent window. In this way, you can leverage both the remote peer to peer power of VDO.Ninja, but also the MIDI functionally. A sample web app will be provided at some point, so if you want to customize the VDO.Ninja controller or embed the VDO.Ninja controller into your app, it's fairly easy to do.
+VDO.Ninja has an IFRAME API, which will let you issue commands to VDO.Ninja via a parent window. In this way, you can leverage both the remote peer to peer power of VDO.Ninja, but also the MIDI functionally. A sample web app using the IFRAME API can be found here, https://vdo.ninja/alpha/examples/powerpoint, demonstrating how you can customize the VDO.Ninja controller or embed the VDO.Ninja controller into your app.
 
-The IFRAME API commands needed, for developers, are `{nextSlide:true}` and  `{prevSlide:true}`. Pretty simple, and this will auto-transmit the commands to any remotely connected peer with `&midiin` added to their URL. If they have the autohotkey script running, and PowerPoint running, it should give you control of their presentation.
+You can pass a room name via the URL, if you wish to use it in production
+```
+Client link: https://vdo.ninja/alpha/examples/powerpoint?room=TESTROOM123
+Host link: https://vdo.ninja/alpha/?room=TESTROOM123&midiin
+``
+
+For developers, the IFRAME API commands are `{nextSlide:true}` and  `{prevSlide:true}`. Pretty simple, and this will auto-transmit the commands to any remotely connected peer with `&midiin` added to their URL. If they have the autohotkey script running, and PowerPoint running, it should give you control of their presentation.
 
 This is currently only available on VDO.Ninja version 22.12 and up. Refer to the VDO.Ninja IFRAME documentation here https://docs.vdo.ninja/guides/iframe-api-documentation 
 
