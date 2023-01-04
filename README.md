@@ -2,7 +2,7 @@
 
 With this code and guide, you can remotely control PowerPoint. It's primarily designed for VDO.Ninja remote guests to control a presented PowerPoint slide, but it can be used in other ways as well.
 
-We will be using Autohotkey, a virtual MIDI driver, and optionally VDO.Ninja to control Power Point.  I saw optionally use VDO.Ninja, as you can replace it with a locally connected StreamDeck or other local MIDI-compatible software.
+We will be using Autohotkey, a virtual MIDI driver, and optionally VDO.Ninja to control Power Point.  I say 'optionally VDO.Ninja', as you can replace it with a locally connected StreamDeck or other local MIDI-compatible software.
 
 I've only tested this with Windows 11 currently; Apple/Linux users will likely have to tweak the guide as needed.
 
