@@ -96,7 +96,7 @@ Client link: https://vdo.ninja/alpha/examples/powerpoint?room=TESTROOM123
 Host link: https://vdo.ninja/alpha/?room=TESTROOM123&midiin
 ``
 
-![image](https://user-images.githubusercontent.com/2575698/210515347-f881d778-0f2c-4f3a-a2f7-3d2d8504345d.png)
+![image](https://user-images.githubusercontent.com/2575698/210515432-7d1dd7a1-6f68-4f5d-a779-0ec982bc768e.png)
 
 
 For developers, the IFRAME API commands are `{nextSlide:true}` and  `{prevSlide:true}`. Pretty simple, and this will auto-transmit the commands to any remotely connected peer with `&midiin` added to their URL. If they have the autohotkey script running, and PowerPoint running, it should give you control of their presentation.
