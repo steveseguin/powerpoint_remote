@@ -34,11 +34,7 @@ Class MyDelegate
 				} else {
 					MsgBox("Next Slide")
 				}
-			} else {
-				MsgBox("Wrong MIDI value detected: ".event.controller . "=" . event.value)
-			}
-		} else {
-			MsgBox("Wrong MIDI CC event detected: ".event.controller . "=" . event.value)
+			} 
 		}
     }
 }
