@@ -116,6 +116,12 @@ We'd just need to have `https://vdo.ninja/alpha/?api=YOURAPIKEY&midiin` open to 
 You can refer to the HTTP/WSS API documentation for more information: https://github.com/steveseguin/Companion-Ninja
 
 
+## Troubleshooting
+
+If you get a message pop up from the AutoHotkey script, saying "Slide Next" or something, it means it didn't detect PowerPoint. Instead, it's just letting you know it got a request for next/prev slide, but can't act on it.  If PowerPoint is detected, those messages do not now.
+
+If you are using a Mac/Linux, 🤷🏻‍♂️, I'd appreciate any help debugging and improving support there. 
+
 ## TO-DO still
 - keyboard short cuts for the next/prev need to be added
 - Google Slide support and other app support added
