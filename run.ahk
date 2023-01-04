@@ -17,23 +17,37 @@ midi.delegate := MyDelegate()
 Class MyDelegate
 {
     MidiControlChange(event) {
-        ; MsgBox(event.controller . "=" . event.value)
+       
 		if (event.controller == 110){ ; setup to work with VDO.Ninja's &ppt mode
 			if (event.value==10){
 				if (WinExist("PowerPoint Slide Show")){
 					WinActivate ;
 					Send "{PgUp}"
+				} else {
+					MsgBox("Back Slide")
 				}
-			}
-			if (event.value==11){
+			} else if (event.value==11){
 				if (WinExist("PowerPoint Slide Show")){
 					WinActivate ;
 					Send "{PgDn}"
+					
+				} else {
+					MsgBox("Next Slide")
 				}
+			} else {
+				MsgBox("Wrong MIDI value detected: ".event.controller . "=" . event.value)
 			}
+		} else {
+			MsgBox("Wrong MIDI CC event detected: ".event.controller . "=" . event.value)
 		}
     }
 }
 
 
-MsgBox("MIDI PowerPoint Controller Started")
+
+
+if (WinExist("PowerPoint Slide Show")){
+	MsgBox("MIDI PowerPoint Controller Started")
+} else {
+	MsgBox("MIDI PowerPoint Controller Started; PowerPoint not found though.")
+}
