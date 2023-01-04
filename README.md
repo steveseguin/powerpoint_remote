@@ -112,3 +112,9 @@ We'd just need to have `https://vdo.ninja/alpha/?api=YOURAPIKEY&midiin` open to 
 `https://api.vdo.ninja/YOURAPIKEY/nextSlide` and `https://api.vdo.ninja/YOURAPIKEY/prevSlide` woudl be the HTTP commands. Refer to the API documentation for details on the WSS commands.
 
 You can refer to the HTTP/WSS API documentation for more information: https://github.com/steveseguin/Companion-Ninja
+
+
+## TO-DO still
+- keyboard short cuts for the next/prev need to be added
+- Google Slide support and other app support added
+- maybe add some addition buttons in; do I need more than prev/next ?
