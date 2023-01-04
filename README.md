@@ -6,6 +6,8 @@ We will be using Autohotkey, a virtual MIDI driver, and optionally VDO.Ninja to 
 
 I've only tested this with Windows 11 currently; Apple/Linux users will likely have to tweak the guide as needed.
 
+The AutoHotKey script can be modified to work with other apps, not just PowerPoint. I'll add more apps as they are requested.
+
 ## Basic setup for the host system
 
 The host system is what is running the desktop version of Power Point.
