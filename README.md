@@ -24,8 +24,7 @@ Once extracted, we can just run the `run.ahk` file. Double clicking on it normal
 
 With it running, we should see a little green H icon in our task tray.  If we right-click on it, we can select MIDI Input Devices and then select our loopMIDI device.  If we did that correctly, there should be a little checkmark next to it in the menu, indicating our AutoHotKey script is listening to that MIDI device for commands.
 
-![image](https://user-images.githubusercontent.com/2575698/210496836-511770af-f25d-49a7-a3f8-d6df14bd5cb6.png)
-
+![image](https://user-images.githubusercontent.com/2575698/210497319-0a8a45e0-6c89-4ae6-9c1d-e8973500c4c9.png)
 
 At this point, there are a few different ways to use this setup to control PowerPoint; we'll cover some scenarios and their setup below.
 
