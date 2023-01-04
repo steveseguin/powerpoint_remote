@@ -88,7 +88,7 @@ In our AutoHotKey app, assuming we have the MIDI loopback device selected as the
 
 You don't need to technically use a StreamDeck to issue MIDI commands; browser have something called WebMIDI, which is what VDO.Ninja uses. Making your own little web app in the browser that issues MIDI commands to the local MIDI device will give web developers quite a bit of flexibility. It's out-of-scope of this guide, but it's something that's easy enough to look up how to do.
 
-## Remote Web control via VDO.Ninja
+## Remote Web control via VDO.Ninja (IFRAME API)
 
 VDO.Ninja has an IFRAME API, which will let you issue commands to VDO.Ninja via a parent window. In this way, you can leverage both the remote peer to peer power of VDO.Ninja, but also the MIDI functionally. A sample web app using the IFRAME API can be found here, https://vdo.ninja/alpha/examples/powerpoint, demonstrating how you can customize the VDO.Ninja controller or embed the VDO.Ninja controller into your app.
 
@@ -103,7 +103,15 @@ Host link: https://vdo.ninja/alpha/?room=TESTROOM123&midiin
 
 For developers, the IFRAME API commands are `{nextSlide:true}` and  `{prevSlide:true}`. Pretty simple, and this will auto-transmit the commands to any remotely connected peer with `&midiin` added to their URL. If they have the autohotkey script running, and PowerPoint running, it should give you control of their presentation.
 
-This is currently only available on VDO.Ninja version 22.12 and up. Refer to the VDO.Ninja IFRAME documentation here https://docs.vdo.ninja/guides/iframe-api-documentation 
+ie: `iframe.contentWindow.postMessage({nextSlide:true}, '*');`
+
+This `nextSlide` and `prevSlide` API call is currently only available on VDO.Ninja version 22.12 and up. Refer to the VDO.Ninja IFRAME documentation here https://docs.vdo.ninja/guides/iframe-api-documentation 
+
+If you want to make custom commands, you can just issue RAW MIDI commands via the VDO.Ninja IFRAME API instead.
+
+`iframe.contentWindow.postMessage({"sendRawMIDI":{data:[176, 110, 12]}}, '*');` is an example of a MIDI command. You'll need to update the AutoHotKey script to listen for those new MIDI commands, and do something with it, but that's pretty easy in most cases. Adding a button for such a custom command to the sample code provided is just basic javascript/html, which is also quite accessible.
+
+Sending raw MIDI commands is supported I think in v20 of VDO.Ninja; not just v22.12 and newer.
 
 ## HTTP / Websocket API
 
