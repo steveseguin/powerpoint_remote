@@ -72,7 +72,7 @@ This link is used by the host PowerPoint system.
 
 #### Remote client setup in VDO.Ninja
 
-We can install loopMIDI on the remote StreamDeck machine and install a MIDI plugin onto our StreamDeck.  From there, we can output the MIDI control-change command 110 with value 10 and 11 from our StreamDeck to the loopMIDI virtual loopback device.  VDO.Ninja will detect it when using `&midiout`, and forward it to the host system. 
+We can install loopMIDI on the remote StreamDeck machine and install a MIDI plugin onto our StreamDeck (ie: https://apps.elgato.com/plugins/se.trevligaspel.midi).  From there, we can output the MIDI control-change command 110 with value 10 and 11 from our StreamDeck to the loopMIDI virtual loopback device.  VDO.Ninja will detect it when using `&midiout`, and forward it to the host system. 
 
 `https://vdo.ninja/?room=myRoom123&midiout`
 
