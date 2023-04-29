@@ -4,6 +4,8 @@ With this code and guide, you can remotely control PowerPoint. It's primarily de
 
 ![image](https://user-images.githubusercontent.com/2575698/210701455-8900148e-3f95-496f-9565-5226c95884f3.png)
 
+Video guide: [https://youtu.be/ORH8betTt8Y](https://youtu.be/ORH8betTt8Y)
+
 
 We will be using Autohotkey, a virtual MIDI driver, and optionally VDO.Ninja to control Power Point.  I say 'optionally VDO.Ninja', as you can replace it with a locally connected StreamDeck or other local MIDI-compatible software.
 
