@@ -133,6 +133,8 @@ You can refer to the HTTP/WSS API documentation for more information: https://gi
 
 If you get a message pop up from the AutoHotkey script, saying "Slide Next" or something, it means it didn't detect PowerPoint. Instead, it's just letting you know it got a request for next/prev slide, but can't act on it.  If PowerPoint is detected, those messages do not now.
 
+If you are not using English, the issue may be that the PowerPoint window name may be something other than "PowerPoint Slide Show". If this is the case, update the run.ahk file's code so that the window name the code is looking for matches the name of the PowerPoint window's name on your system.
+
 If you are using a Mac/Linux, 🤷🏻‍♂️, I'd appreciate any help debugging and improving support there. 
 
 ## TO-DO still
