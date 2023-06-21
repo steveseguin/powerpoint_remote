@@ -95,9 +95,9 @@ You don't need to technically use a StreamDeck to issue MIDI commands; browser h
 
 ## Control OBS with MIDI, bypassing the need for AHK
 
-This project is a customizable plugin for OBS that will let you control OBS via MIDI.  This means it should work with VDO.Ninja's MIDI controls, bypassing the need for websockets, firewalls, SSL, and other security considerations.
+The [obs-midi-mg](https://github.com/nhielost/obs-midi-mg) project is a customizable plugin for OBS that will let you control OBS via MIDI.  This means it should work with VDO.Ninja's MIDI controls, bypassing the need for websockets, firewalls, SSL, and other security considerations when remotely controlling OBS from the web.
 
-https://github.com/nhielost/obs-midi-mg/releases/tag/v2.3.0
+https://github.com/nhielost/obs-midi-mg/releases/tag/v2.3.0 is a version of the plugin that was last confirmed to be working well.
 
 ## Remote Web control via VDO.Ninja (IFRAME API)
 
