@@ -1,6 +1,6 @@
 # PowerPoint Remote (works with more than just powerpoint)
 
-With this code and guide, you can remotely control PowerPoint, OBS, or anything really, without needing websockets or opening insecure ports on your router. It's primarily designed to let VDO.Ninja remote guests remote control a presented PowerPoint slide, but it can be used in other ways as well.
+With this code and guide, you can remotely control PowerPoint, OBS, or anything really, without needing websockets, SSL, or having to open insecure ports. It's primarily designed to let VDO.Ninja remote guests remote control a presented PowerPoint slide, but it can be used in other ways as well.
 
 ![image](https://user-images.githubusercontent.com/2575698/210701455-8900148e-3f95-496f-9565-5226c95884f3.png)
 
