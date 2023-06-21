@@ -11,7 +11,7 @@ In our main example will be using Autohotkey, a virtual MIDI driver, and optiona
 
 I've only tested this with Windows 11 currently; Apple/Linux users will likely have to tweak the guide as needed.
 
-The AutoHotKey script can be modified to work with other apps, not just PowerPoint. I'll add more apps as they are requested.  You can also use alternatives to AutoHotkey, including the OBS plugin [obs-midi-mg](https://github.com/nhielost/obs-midi-mg), which will let you control OBS without the need for AHK.
+The AutoHotKey script can be modified to work with other apps, not just PowerPoint. I'll add more apps as they are requested.  You can also use alternatives to AutoHotkey, including the OBS plugin [obs-midi-mg](https://github.com/nhielost/obs-midi-mg), which will let you control OBS with MIDI directly, without the need for AHK. This is a great way to control OBS remotely online without the need of opening an secure port on your computer or having to enable SSL to use from the web.
 
 ## Basic setup for the host system
 
