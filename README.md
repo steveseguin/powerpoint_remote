@@ -1,17 +1,17 @@
 # PowerPoint Remote
 
-With this code and guide, you can remotely control PowerPoint. It's primarily designed for VDO.Ninja remote guests to control a presented PowerPoint slide, but it can be used in other ways as well.
+With this code and guide, you can remotely control PowerPoint, OBS, or anything really. It's primarily designed for VDO.Ninja remote guests to control a presented PowerPoint slide though, but it can be used in other ways as well.
 
 ![image](https://user-images.githubusercontent.com/2575698/210701455-8900148e-3f95-496f-9565-5226c95884f3.png)
 
 Video guide: [https://youtu.be/ORH8betTt8Y](https://youtu.be/ORH8betTt8Y)
 
 
-We will be using Autohotkey, a virtual MIDI driver, and optionally VDO.Ninja to control Power Point.  I say 'optionally VDO.Ninja', as you can replace it with a locally connected StreamDeck or other local MIDI-compatible software.
+In our main example will be using Autohotkey, a virtual MIDI driver, and optionally VDO.Ninja to control Power Point.  I say 'optionally VDO.Ninja', as you can replace it with a locally connected StreamDeck or other local MIDI-compatible software.
 
 I've only tested this with Windows 11 currently; Apple/Linux users will likely have to tweak the guide as needed.
 
-The AutoHotKey script can be modified to work with other apps, not just PowerPoint. I'll add more apps as they are requested.
+The AutoHotKey script can be modified to work with other apps, not just PowerPoint. I'll add more apps as they are requested.  You can also use alternatives to AutoHotkey, including the OBS plugin [obs-midi-mg](https://github.com/nhielost/obs-midi-mg), which will let you control OBS without the need for AHK.
 
 ## Basic setup for the host system
 
@@ -92,6 +92,12 @@ In our AutoHotKey app, assuming we have the MIDI loopback device selected as the
 ## Local Web control via MIDI
 
 You don't need to technically use a StreamDeck to issue MIDI commands; browser have something called WebMIDI, which is what VDO.Ninja uses. Making your own little web app in the browser that issues MIDI commands to the local MIDI device will give web developers quite a bit of flexibility. It's out-of-scope of this guide, but it's something that's easy enough to look up how to do.
+
+## Control OBS with MIDI, bypassing the need for AHK
+
+This project is a customizable plugin for OBS that will let you control OBS via MIDI.  This means it should work with VDO.Ninja's MIDI controls, bypassing the need for websockets, firewalls, SSL, and other security considerations.
+
+https://github.com/nhielost/obs-midi-mg/releases/tag/v2.3.0
 
 ## Remote Web control via VDO.Ninja (IFRAME API)
 
