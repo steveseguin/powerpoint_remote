@@ -1,4 +1,4 @@
-# PowerPoint Remote
+# PowerPoint Remote (works with more than just powerpoint)
 
 With this code and guide, you can remotely control PowerPoint, OBS, or anything really. It's primarily designed for VDO.Ninja remote guests to control a presented PowerPoint slide though, but it can be used in other ways as well.
 
