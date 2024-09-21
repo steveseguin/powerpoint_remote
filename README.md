@@ -7,7 +7,7 @@ With this code and guide, you can remotely control PowerPoint, OBS, or anything 
 Video guide: [https://youtu.be/ORH8betTt8Y](https://youtu.be/ORH8betTt8Y)
 
 
-In our main example will be using Autohotkey, a virtual MIDI driver, and optionally VDO.Ninja to control Power Point.  I say 'optionally VDO.Ninja', as you can replace it with a locally connected StreamDeck or other local MIDI-compatible software.
+In our main example will be using Autohotkey v2, a virtual MIDI driver, and optionally VDO.Ninja to control Power Point.  I say 'optionally VDO.Ninja', as you can replace it with a locally connected StreamDeck or other local MIDI-compatible software.
 
 I've only tested this with Windows 11 currently; Apple/Linux users will likely have to tweak the guide as needed.
 
@@ -19,7 +19,7 @@ The host system is what is running the desktop version of Power Point.
 
 The host system also needs a virtual MIDI loopback device needs to be installed. I use LoopMIDI for Windows, but there are other options. https://www.tobias-erichsen.de/software/loopmidi.html
 
-The next critical bit of setup for the host system is having Autohotkey v2 installed; https://www.autohotkey.com/download/
+The next **critical** bit of setup is for the host system to have **have Autohotkey v2 installed**; https://www.autohotkey.com/download/
 
 The script we want AutoHotKey to run is contained in this code repository, so we need to download and run that code as well;
 
