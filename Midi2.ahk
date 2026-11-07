@@ -245,7 +245,7 @@ Class AHKMidi
   {
     midiInDevices := Map()
 
-    deviceCount := DllCall( "winmm.dll\midiOutGetNumDevs" ) - 1
+    deviceCount := DllCall( "winmm.dll\midiInGetNumDevs" )
 
     Loop deviceCount 
     {
